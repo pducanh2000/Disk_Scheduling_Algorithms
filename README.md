@@ -22,7 +22,7 @@
  
  $ cd Disk_Scheduling_Algorithms
  
-# Create a virtualenv (Optional but recomment)
+# Create a virtualenv (Optional but recommended)
  $ python3 -m venv venv
  
 # Activate the virtualenv
