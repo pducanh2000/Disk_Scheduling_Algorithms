@@ -31,16 +31,19 @@ def SCAN(hp, reqs):
     start = 0
     distance = []
     distance.append(hp)
-    for i in range(pos, end+1):
+    for i in range(pos, start-1, -1):
         if i in requests:
             time += abs(pos-i)
             pos = i
             distance.append(i)
             requests.remove(i)
-
-    time += abs(pos-end)
-    pos = end
-    for i in range(end, start-1, -1):
+            
+    if len(requests):
+    	time += abs(pos-0)
+    	pos = 0
+    	distance.append(pos)
+    	
+    for i in range(start, end+1):
         if i in requests:
             time += abs(pos-i)
             pos = i
@@ -64,34 +67,6 @@ def FCFS(hp, requests):
     save('total', time, 'distance', distance)
 
 
-def C_SCAN1(hp, reqs):
-    requests = reqs.copy()
-    pos = hp
-    time = 0
-    end = 200
-    start = 0
-    distance = []
-    distance.append(hp)
-    # seek from curr_pos to end which is 200
-    for i in range(pos, end+1):
-        if i in requests:
-            time += abs(pos-i)
-            pos = i
-            distance.append(i)
-            requests.remove(i)
-    time += abs(pos-end)
-    pos = end
-    # seek to hp from start
-    for i in range(start, hp+1):
-        if i in requests:
-            time += abs(pos-i)
-            pos = i
-            distance.append(i)
-            requests.remove(i)
-
-    # calculate average seek time
-    save('total', time, 'distance', distance)
-
 def C_SCAN(hp, reqs):
     requests = reqs.copy()
     pos = hp
@@ -107,6 +82,7 @@ def C_SCAN(hp, reqs):
             pos = i
             distance.append(i)
             requests.remove(i)
+            
     if len(requests):
     	time += abs(pos-end)
     	pos = end
