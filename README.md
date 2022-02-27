@@ -20,13 +20,13 @@
 # Clone repo
  $ git clone https://github.com/CanhhnaC/disk-scheduling-algorithms.git
  
- $ cd disk-scheduling-algorithms
+ $ cd Disk_Scheduling_Algorithms
  
 # Create a virtualenv (Optional but recomment)
  $ python3 -m venv venv
  
 # Activate the virtualenv
- $ venv/bin/activate  (Linux)
+ $ source venv/bin/activate  (Linux)
  & venv/Script/Activate.ps1 (Windows)
 
 # Install all dependencies
