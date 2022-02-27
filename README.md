@@ -18,7 +18,7 @@
  Python 3.7
 
 # Clone repo
- $ git clone https://github.com/CanhhnaC/disk-scheduling-algorithms.git
+ $ git clone https://github.com/pducanh2000/Disk_Scheduling_Algorithms.git
  
  $ cd Disk_Scheduling_Algorithms
  
